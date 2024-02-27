@@ -176,3 +176,7 @@ themeButton.addEventListener('click', () => {
     localStorage.setItem('selected-theme', getCurrentTheme())
     localStorage.setItem('selected-icon', getCurrentIcon())
 })
+
+function redirectToEmail() {
+    window.location.href = 'mailto:driveguardcare@gmail.com';
+}
