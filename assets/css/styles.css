@@ -1292,4 +1292,80 @@ project__title{
   }
 }
 
+.achievements__container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Adjust the space between images as needed */
+}
+
+.achievement {
+  position: relative;
+  width: calc(33.333% - 20px); /* 3 images per row by default */
+}
+
+.achievement__img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.achievement__desc {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+  color: #fff; /* White text */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  padding: 10px; /* Padding for the text */
+}
+
+.achievement:hover .achievement__desc {
+  opacity: 1;
+}
+
+/* Tablet (adjust this breakpoint as needed) */
+@media (max-width: 768px) {
+  .achievement {
+      width: calc(50% - 20px); /* 2 images per row */
+  }
+}
+
+/* Mobile (adjust this breakpoint as needed) */
+@media (max-width: 480px) {
+  .achievement {
+      width: 100%; /* 1 image per row */
+  }
+  .achievement__desc {
+      font-size: 14px; /* Smaller text for smaller screens */
+  }
+}
+
+.achievements__title {
+  text-align: center;
+  font-size: 2rem; /* Example font size, adjust as needed */
+  margin-bottom: 20px; /* Adds some space between the title and the images */
+  color: #333; /* Default color for light theme */
+  transition: color 0.3s ease; /* Smooth transition for color change */
+}
+
+/* Adjustments for smaller screens */
+@media (max-width: 480px) {
+  .achievements__title {
+      font-size: 1.5rem; /* Smaller font size for mobile devices */
+  }
+}
+
+/* Dark theme adjustments */
+.dark-theme .achievements__title {
+  color: #fff; /* White text for dark theme */
+}
+
+
+
 
